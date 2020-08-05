@@ -3,6 +3,16 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
+  def edit
+    @user = User.find(params[:id])
+  end
+
+  def update
+    @user = User.find(params[:id])
+    @user.update(username: params[:user][:username], email: params[:user][:email], password: params[:user][:password])
+    redirect_to new_user_path
+  end
+
   def create
     #@user = User.new(username: params[:username], email: params[:email], password: params[:password])
     @user = User.new(user_params)
@@ -12,6 +22,7 @@ class UsersController < ApplicationController
       render :new
     end
   end
+  
 
   private
   def user_params

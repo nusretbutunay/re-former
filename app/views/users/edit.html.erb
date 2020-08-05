@@ -1,5 +1,5 @@
 
-
+<h1>Edit User</h1>
 <!--
 # <form action="/users" method="post" accept-charset="UTF-8"> 
 #   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
@@ -12,14 +12,9 @@
 #   <input type="submit" value="Submit">
 # </form>
 -->
-<div class = "container">
-  <h1>New User</h1>
-  <%= form_for @user do |f| %>
-    Username: <%= f.text_field :username, placeholder: "Your username here" %> <br/><br/> 
-    Email: <%= f.email_field :email, placeholder: "example@example.com" %> <br/><br/>
-    Password: <%= f.password_field :password %> <br/><br/>
-    <div class="submit">
-    <%= f.submit "Submit", html: {class: "sub"}%>
-    </div>
-  <% end %> 
-</div>
+<%= form_for @user do |f| %>
+  Username: <%= f.text_field :username, placeholder: "Your username here" %> <br/><br/> 
+  Email: <%= f.email_field :email, placeholder: "example@example.com" %> <br/><br/>
+  Password: <%= f.password_field :password %> <br/><br/>
+  <%= f.submit "Submit" %>
+<% end %> 
