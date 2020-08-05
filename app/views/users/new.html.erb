@@ -1,6 +1,6 @@
-<!--
-# <h1>New User</h1>
 
+<h1>New User</h1>
+<!--
 # <form action="/users" method="post" accept-charset="UTF-8"> 
 #   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
 #   <label for="username">Username: </label>
@@ -13,6 +13,8 @@
 # </form>
 -->
 <%= form_for @user, url: {action: "create"} do |f| %>
-   <%= f.text_field :username %> <%= f.text_field :email %> <%= f.text_field :password %>
-   <%= f.submit "Create" %>
-    <% end %> 
+  Username: <%= f.text_field :username, placeholder: "Your username here" %> <br/><br/> 
+  Email: <%= f.email_field :email, placeholder: "example@example.com" %> <br/><br/>
+  Password: <%= f.password_field :password %> <br/><br/>
+  <%= f.submit "Submit" %>
+<% end %> 
