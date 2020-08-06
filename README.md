@@ -1,6 +1,8 @@
-# Micro-Reddit with Ruby on Rails
+# Forms on Ruby on Rails
 
-This is a model of micro-reddit that was created in ruby on rails with no UI
+[Collaborative project]
+
+This project implements the multiple ways to build a form in rails that can send parameters to a controller so that it can build an instance of a model with those parameters.
 
 ## Built With
 
@@ -11,7 +13,7 @@ This is a model of micro-reddit that was created in ruby on rails with no UI
 To get a local copy of the repository please run the following commands on your terminal:
 
 $ cd <folder>
-$ git clone https://github.com/haraphat01/micro-reddit.git
+$ git clone https://github.com/nusretbutunay/re-former.git
 
 ## Authors
 
